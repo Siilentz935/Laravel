@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Hash;
 
 class UsuariosSeeder extends Seeder
 {
@@ -37,16 +37,14 @@ class UsuariosSeeder extends Seeder
                           //
                           ]);
 
-        DB::table('TableUsuarios')->insert([
-          'idStatus' => '1',
-        'strNombre' => 'Osman',
-        'strApellidoPaterno' => 'Barrera',
-        'strApellidoMaterno' => 'Juarez',
-        'strLogin' => 'Osmanbj@hotmail.com',
-        'strPassword' => 'password'
-        //
-        ]);
-
+                          DB::table('TableUsuarios')->insert([
+                            'idStatus' => '1',
+                            'strNombre' => 'Osman',
+                            'strApellidoPaterno' => 'Barrera',
+                            'strApellidoMaterno' => 'Juarez',
+                            'strLogin' => 'Osmanbj@hotmail.com',
+                            'strPassword' => Hash::make('password')
+                        ]);
      
     }
 }

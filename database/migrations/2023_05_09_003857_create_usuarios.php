@@ -43,7 +43,7 @@ class CreateUsuarios extends Migration
             $table->string('strApellidoPaterno',100);
             $table->string('strApellidoMaterno',100);
             $table->string('strLogin',100);
-            $table->string('strPassword',30);
+            $table->string('strPassword',200);
             $table->timestamps();
         });
     
